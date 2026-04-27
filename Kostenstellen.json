@@ -1,0 +1,226 @@
+{
+    "BLG": {
+        "Betriebsleitung # 000": [
+            {
+                "Kostenstelle": "AMN",
+                "Name": "Administration",
+                "Nummer": "100",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "PDN",
+                "Name": "Produktion",
+                "Nummer": "400",
+                "Rechtsform": null
+            },
+            {
+                "Kostenstelle": "VAN",
+                "Name": "Veranstaltungen",
+                "Nummer": "500",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "VTB",
+                "Name": "Vertrieb",
+                "Nummer": "600",
+                "Rechtsform": "OHG"
+            }
+        ]
+    },
+    "AMN": {
+        "Administration # 100": [
+            {
+                "Kostenstelle": "RMT",
+                "Name": "Risiko-Management",
+                "Nummer": "103",
+                "Rechtsform": null
+            },
+            {
+                "Kostenstelle": "FMT",
+                "Name": "Facility-Management",
+                "Nummer": "106",
+                "Rechtsform": null
+            },
+            {
+                "Kostenstelle": "ITE",
+                "Name": "Informationstechnologie",
+                "Nummer": "110",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "KCE",
+                "Name": "Küche",
+                "Nummer": "111",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "SMT",
+                "Name": "Shareholder-Management",
+                "Nummer": "113",
+                "Rechtsform": null
+            },
+            {
+                "Kostenstelle": "VWG",
+                "Name": "Verwaltung",
+                "Nummer": "116",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "WST",
+                "Name": "Werkstatt",
+                "Nummer": "117",
+                "Rechtsform": null
+            }
+        ]
+    },
+    "PDN": {
+        "Produktion # 400": [
+            {
+                "Kostenstelle": "FMT",
+                "Name": "Facility-Management",
+                "Nummer": "106",
+                "Rechtsform": null
+            },
+            {
+                "Kostenstelle": "WST",
+                "Name": "Werkstatt",
+                "Nummer": "117",
+                "Rechtsform": null
+            },
+            {
+                "Kostenstelle": "AZT",
+                "Name": "Anzucht",
+                "Nummer": "421",
+                "Rechtsform": "GbR"
+            },
+            {
+                "Kostenstelle": "ABG",
+                "Name": "Ausbildung",
+                "Nummer": "422",
+                "Rechtsform": "GbR"
+            },
+            {
+                "Kostenstelle": "BKT",
+                "Name": "Böden_Kompost",
+                "Nummer": "424",
+                "Rechtsform": "GbR"
+            },
+            {
+                "Kostenstelle": "FAU",
+                "Name": "Freiland-Anbau",
+                "Nummer": "425",
+                "Rechtsform": "GbR"
+            },
+            {
+                "Kostenstelle": "GAU",
+                "Name": "Geschützter_Anbau",
+                "Nummer": "426",
+                "Rechtsform": "GbR"
+            },
+            {
+                "Kostenstelle": "PSZ",
+                "Name": "Pflanzenschutz",
+                "Nummer": "427",
+                "Rechtsform": "GbR"
+            },
+            {
+                "Kostenstelle": "PFK",
+                "Name": "Produktions-Fuhrpark",
+                "Nummer": "428",
+                "Rechtsform": "GbR"
+            },
+            {
+                "Kostenstelle": "PGT",
+                "Name": "Produktions-Gerätschaft",
+                "Nummer": "429",
+                "Rechtsform": "GbR"
+            },
+            {
+                "Kostenstelle": "SAU",
+                "Name": "Saatgut_Anbau",
+                "Nummer": "430",
+                "Rechtsform": "GbR"
+            }
+        ]
+    },
+    "VAN": {
+        "Veranstaltungen # 500": [
+            {
+                "Kostenstelle": "FMT",
+                "Name": "Facility-Management",
+                "Nummer": "106",
+                "Rechtsform": null
+            },
+            {
+                "Kostenstelle": "WST",
+                "Name": "Werkstatt",
+                "Nummer": "117",
+                "Rechtsform": null
+            }
+        ]
+    },
+    "VTB": {
+        "Vertrieb # 600": [
+            {
+                "Kostenstelle": "FMT",
+                "Name": "Facility-Management",
+                "Nummer": "106",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "SMT",
+                "Name": "Shareholder-Management",
+                "Nummer": "113",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "WST",
+                "Name": "Werkstatt",
+                "Nummer": "117",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "HVF",
+                "Name": "Hofverkauf",
+                "Nummer": "636",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "KMN",
+                "Name": "Kommissionieren",
+                "Nummer": "637",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "LGN",
+                "Name": "Lagern",
+                "Nummer": "638",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "LSE",
+                "Name": "Lieferservice",
+                "Nummer": "639",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "MKG",
+                "Name": "Marketing",
+                "Nummer": "641",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "VFK",
+                "Name": "Vertriebs-Fuhrpark",
+                "Nummer": "644",
+                "Rechtsform": "OHG"
+            },
+            {
+                "Kostenstelle": "WZF",
+                "Name": "Waren-Zukauf",
+                "Nummer": "646",
+                "Rechtsform": "OHG"
+            }
+        ]
+    }
+}
