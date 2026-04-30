@@ -191,7 +191,7 @@ def main():
     continue_program = True
     first_run = True
     
-    print("\033[32mRechnungswesen Einsortierer\033[0m")
+    print("\033[32mRechnungsmaster 3000\033[0m")
     print("\033[32mAlpha v1.0\033[0m\n\n")
     
     while continue_program:
