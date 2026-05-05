@@ -198,7 +198,9 @@ def main():
         if first_run and args.file:
             input_path = Path(args.file).expanduser().resolve()
         else:
-            input_path = Path(input("Ziehe die zu behandelnde Datei hierher: ").strip()).expanduser().resolve()
+            raw_input = input("Ziehe die zu behandelnde Datei hierher: ").strip()
+            raw_input = raw_input.strip('"').strip("'")
+            input_path = Path(raw_input).expanduser().resolve()
 
         if not input_path.exists() or not input_path.is_file():
             print(f"Fehler: Datei nicht gefunden: {input_path}")
