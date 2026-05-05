@@ -5,6 +5,17 @@ import shutil
 from pathlib import Path
 
 
+class RestartRequested(Exception):
+    pass
+
+
+def read_input(prompt: str) -> str:
+    value = input(prompt).strip()
+    if value.lower() == "r":
+        raise RestartRequested()
+    return value
+
+
 def load_json(path: Path):
     with path.open("r", encoding="utf-8") as f:
         return json.load(f)
@@ -49,7 +60,7 @@ def prompt_select(options, prompt_text):
         print(f"  {str(index).rjust(width)}. {label}")
 
     while True:
-        choice = input("Nummer eingeben: ").strip()
+        choice = read_input("Nummer eingeben: ")
         if not choice.isdigit():
             print("Bitte eine Zahl aus der Liste eingeben.")
             continue
@@ -88,7 +99,7 @@ def ask_paid_status():
 
 def ask_continue():
     while True:
-        answer = input("\nMöchtest du eine weitere Rechnung umbenennen? (j/n): ").strip().lower()
+        answer = read_input("\nMöchtest du eine weitere Rechnung umbenennen? (j/n): ").strip().lower()
         if answer in ("j", "ja"):
             return True
         if answer in ("n", "nein"):
@@ -192,20 +203,21 @@ def main():
     first_run = True
     
     print("\033[32mRechnungsmaster 3000\033[0m")
-    print("\033[32mAlpha v1.0\033[0m\n\n")
+    print("\033[32mBeta v1.0\033[0m")
+    print("\033[32mTippe 'r' jederzeit, um neu zu starten.\033[0m\n\n")
     
     while continue_program:
-        if first_run and args.file:
-            input_path = Path(args.file).expanduser().resolve()
-        else:
-            raw_input = input("Ziehe die zu behandelnde Datei hierher: ").strip()
-            raw_input = raw_input.strip('"').strip("'")
-            input_path = Path(raw_input).expanduser().resolve()
+        try:
+            if first_run and args.file:
+                input_path = Path(args.file).expanduser().resolve()
+            else:
+                raw_input = read_input("Ziehe die zu behandelnde Datei hierher: ")
+                raw_input = raw_input.strip('"').strip("'")
+                input_path = Path(raw_input).expanduser().resolve()
 
-        if not input_path.exists() or not input_path.is_file():
-            print(f"Fehler: Datei nicht gefunden: {input_path}")
-        else:
-            try:
+            if not input_path.exists() or not input_path.is_file():
+                print(f"Fehler: Datei nicht gefunden: {input_path}")
+            else:
                 rechnungstyp = ask_invoice_type()  # Kreditor oder Debitor
                 unternehmen = ask_company_type()
                 bezahlt = ask_paid_status()
@@ -221,8 +233,12 @@ def main():
                 else:
                     shutil.copy2(input_path, destination)
                     print(f"\nErfolgreich gespeichert ✅\n{destination}")
-            except Exception as exc:
-                print(f"Fehler: {exc}")
+        except RestartRequested:
+            print("\nStarte von vorn...\n")
+            first_run = True
+            continue
+        except Exception as exc:
+            print(f"Fehler: {exc}")
 
         first_run = False
         #continue_program = ask_continue()
